@@ -1,5 +1,5 @@
-class pub {
-    constructor(name, owner, openDays, openHours, beers){
+class Pub {
+    constructor(name, Owner, openDays, OpenHours, beers){
         this.name= name;
         this.owner = owner;
         this.openDays = openDays;
@@ -8,7 +8,7 @@ class pub {
     }
 }
 
-class owner{
+class Owner{
     constructor(firstName, lastName, mail){
         this.firstName = firstName;
         this.lastName = lastName;
@@ -16,14 +16,14 @@ class owner{
     }
 }
 
-class openHours{
+class OpenHours{
     constructor(start, end){
         this.start = start;
         this.end = end;
     }
 }
 
-class beer{
+class Beer{
     constructor(type, name){
         this.type = type;
         this.name = name;
@@ -31,8 +31,8 @@ class beer{
 }
 
 module.exports = {
-    pub:pub,
-    owner:owner,
-    openHours:openHours,
-    beer:beer
+    Pub:Pub,
+    Owner:Owner,
+    OpenHours:OpenHours,
+    Beer:Beer
 }
