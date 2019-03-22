@@ -1,15 +1,16 @@
-var pubs = require('../mocks/pubs.json');
-var moment  = require('moment');
+var pubs = require('../mocks/pubs');
+//var moment  = require('moment');
+
 
 function listPubs(){
     var listPubs = [];
-    pubs.forEach(function(element) {
-        listPubs.push(element.name);
+    pubs.listPubs().map((p) => {
+        listPubs.push(p.name);
     });
     return listPubs;
 }
 
-function listOpenPubs(){
+/*function listOpenPubs(){
     var listPubs = [];
     pubs.forEach(function(element) {
         var openPub;
@@ -44,9 +45,9 @@ function listOpenPubs(){
     });
 
     return listPubs;
-}
+}*/
 
 module.exports= {
     listPubs: listPubs,
-    listOpenPubs: listOpenPubs
+    //listOpenPubs: listOpenPubs
 }

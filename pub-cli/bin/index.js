@@ -8,7 +8,7 @@ program
     .parse(process.argv);
 if (program.list) {
     var listPubs = require('../src/main').getListPub;
-    listPubs().forEach(function(element) {
+    listPubs().map(function(element) {
        console.log(element);
     });
 }
