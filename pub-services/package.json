@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sloiseau44/pub/issues"
   },
-  "homepage": "https://github.com/sloiseau44/pub#readme"
+  "homepage": "https://github.com/sloiseau44/pub#readme",
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
 }

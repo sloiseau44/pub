@@ -4,6 +4,12 @@ function getListPub(){
     return services.listPubs();
 }
 
+function getListOpenPub(){
+    console.log(services.listOpenPubs());
+    return services.listOpenPubs();
+}
+
 module.exports= {
-    getListPub: getListPub
+    getListPub: getListPub,
+    getListOpenPub: getListOpenPub
 }
