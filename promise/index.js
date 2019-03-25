@@ -1,16 +1,20 @@
-const fs = require('fs-extra');
+const fsExtra = require('fs-extra');
+const fs = require('fs');
 const file = './Temp';
 const pubsJson = require('pub/mocks/pubs.json');
 
 
-fs.pathExists(file)
+fsExtra.pathExists(file)
     .then((exists) =>{
         if(exists){
-            return fs.remove(file);
+            return fsExtra.remove(file);
         }
         return;
 
     })
-    .then(()=> {return fs.ensureDir(file)})
-    .then(()=> {return fs.writeJson("./Temp/pubs.json", pubsJson)})
+    .then(()=> {return fsExtra.ensureDir(file)})
+    .then(()=> {return fsExtra.writeJson("./Temp/pubs.json", pubsJson)})
+    .then(()=> (fs.watchFile("./Temp/pubs.json", (curr, prev) => {
+        console.log(`${"./Temp/pubs.json"} file Changed`);
+    })));
 
